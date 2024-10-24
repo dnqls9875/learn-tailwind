@@ -633,6 +633,10 @@ abbr[title] {
   gap: 1rem;
 }
 
+.gap-8 {
+  gap: 2rem;
+}
+
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
@@ -665,6 +669,10 @@ abbr[title] {
 .bg-slate-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+}
+
+.font-pretendard {
+  font-family: "Pretendard Variable", "sans-serif";
 }
 
 .text-3xl {
@@ -800,7 +808,7 @@ body {
     }
     strong {
       --tw-text-opacity: 1;
-      color: rgb(6 182 212 / var(--tw-text-opacity));
+      color: rgb(55 65 81 / var(--tw-text-opacity));
     }
     p {
       font-size: 1.125rem;
