@@ -150,3 +150,11 @@ body {
     @apply bg-gray-600;
   }
 }
+
+.button {
+  @apply relative w-8 h-8 rounded-full before:absolute before:w-3 before:h-3 before:bg-White before:rounded-full before:left-1/2 before:top-1/2;
+  background: linear-gradient(to bottom, green, rgb(205, 241, 205));
+}
+.button::before {
+  translate: -50% -50%;
+}
