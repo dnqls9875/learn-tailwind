@@ -1,162 +1,24 @@
-@import './font.css';
-@import './syntax.css';
+@import "./fonts.css";
+@import "./syntax.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* & base 스타일 재구성 */
-@layer base {
-  button {
-    @apply cursor-pointer;
-  }
-
-  button:disabled {
-    @apply cursor-not-allowed;
-  }
-
-  abbr[title] {
-    @apply cursor-help no-underline;
-  }
-}
-
-/* % 컴포넌트 */
-@layer components {
-  .button {
-    @apply px-4
-	    py-2
-	    rounded-lg
-	    bg-slate-700
-	    text-slate-100
-	    dark:bg-slate-200
-	    dark:text-slate-800;
-  }
-}
-
-/* ? 유틸리티 */
-@layer utilities {
-  .text-pesto-100 {
-    color: #e8e4d6;
-  }
-  .text-pesto-200 {
-    color: #d1caac;
-  }
-  .text-pesto-300 {
-    color: #bbaf83;
-  }
-  .text-pesto-400 {
-    color: #a49559;
-  }
-  .text-pesto-500 {
-    color: #8d7a30;
-  }
-  .text-pesto-600 {
-    color: #716226;
-  }
-  .text-pesto-700 {
-    color: #55491d;
-  }
-  .text-pesto-800 {
-    color: #383113;
-  }
-  .text-pesto-900 {
-    color: #1c180a;
-  }
-  .bg-pesto-100 {
-    background-color: #e8e4d6;
-  }
-  .bg-pesto-200 {
-    background-color: #d1caac;
-  }
-  .bg-pesto-300 {
-    background-color: #bbaf83;
-  }
-  .bg-pesto-400 {
-    background-color: #a49559;
-  }
-  .bg-pesto-500 {
-    background-color: #8d7a30;
-  }
-  .bg-pesto-600 {
-    background-color: #716226;
-  }
-  .bg-pesto-700 {
-    background-color: #55491d;
-  }
-  .bg-pesto-800 {
-    background-color: #383113;
-  }
-  .bg-pesto-900 {
-    background-color: #1c180a;
-  }
-}
-
-body {
-  background: theme("colors.slate.900");
-}
-
-@media screen(sm) {
-  body {
-    background: theme("colors.slate.700");
-  }
-}
-
-@media screen(md) {
-  body {
-    background: theme("colors.slate.500");
-  }
-}
-
-@media screen(lg) {
-  body {
-    background: theme("colors.slate.200");
-  }
-}
-
-/* 스타일 재사용 */
-.avatar-card {
-  @apply w-[280px] bg-white flex flex-col md:grid md:grid-cols-[120px_1fr] md:w-[500px] gap-6 p-6 rounded-lg shadow-2xl;
-
-  .avatar-card__img {
-    @apply w-20 h-20 self-center rounded-full hover:border-4 hover:border-solid hover:border-yellow-700;
-  }
-  .avatar-card__caption {
-    @apply space-y-4;
-
-    strong {
-      @apply text-gray-700  text-3xl;
-    }
-    p {
-      @apply text-lg;
-    }
-    a {
-      @apply text-cyan-600 active:text-red-500 outline-none focus:outline-none focus:ring-2 focus:ring-violet-600 focus:ring-offset-4 focus:rounded-sm text-lg font-semibold inline-block;
-    }
-  }
-}
-
 .state-button {
-  @apply relative bg-[url(/src/assets/face/face3.jpg)] bg-no-repeat bg-cover bg-center rounded-full size-12;
+  @apply relative size-12 rounded-full bg-[url(/src/assets/face/face3.jpg)] bg-cover bg-center bg-no-repeat;
 
   .state-text {
-    @apply absolute right-0 bottom-0 rounded-full border-2 border-white size-4;
+    @apply absolute bottom-0 right-0 size-4 rounded-full border-2 border-white;
   }
 }
 
 .state-online {
   .state-text {
-    @apply bg-green-600;
+    @apply bg-Green-600;
   }
 }
 .state-offline {
   .state-text {
-    @apply bg-gray-600;
+    @apply bg-Gray-600;
   }
-}
-
-.button {
-  @apply relative w-8 h-8 rounded-full before:absolute before:w-3 before:h-3 before:bg-White before:rounded-full before:left-1/2 before:top-1/2;
-  background: linear-gradient(to bottom, green, rgb(205, 241, 205));
-}
-.button::before {
-  translate: -50% -50%;
 }
